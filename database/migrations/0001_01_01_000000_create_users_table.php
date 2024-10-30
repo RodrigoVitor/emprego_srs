@@ -15,8 +15,18 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->bigInteger('type_user');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('whatsapp');
+            $table->string('state');
+            $table->string('city');
+            $table->string('address');
+            $table->json('education')->nullable();
+            $table->json('experience')->nullable();
+            $table->string('nivel_english')->nullable();
+            $table->string('goals')->nullable();
+            $table->json('complementary_courses')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
